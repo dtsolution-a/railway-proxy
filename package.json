@@ -1,0 +1,25 @@
+{
+  "name": "railway-proxy",
+  "version": "1.0.0",
+  "description": "Node.js proxy server for RailKit API — wraps all endpoints with caching and JSON logging",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "railkit": "latest",
+    "node-cache": "^5.1.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0",
+    "rotating-file-stream": "^3.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
