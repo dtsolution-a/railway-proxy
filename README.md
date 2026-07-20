@@ -4,7 +4,7 @@ Node.js proxy server wrapping the [RailKit API](https://railkit.rajivdubey.dev) 
 - ✅ **8 endpoints** covering all RailKit functions
 - ⚡ **Smart caching** — stable data cached to avoid wasting API credits
 - 📝 **JSON logging** — every request + full response logged to `logs/YYYY-MM-DD.jsonl`
-- 🚀 **One-click Railway.app deploy**
+- 🚀 **One-click Render.com deploy**
 
 ---
 
@@ -330,15 +330,17 @@ Every request is logged to `logs/YYYY-MM-DD.jsonl` (one file per day):
 
 ---
 
-## Deploy to Railway.app
+## Deploy to Render.com (Free Tier)
 
-1. Push this folder to a GitHub repo
-2. Go to [railway.app](https://railway.app) → **New Project** → **Deploy from GitHub**
-3. Select your repo
-4. Go to **Variables** tab → Add:
+1. Push this folder to a GitHub repo (ensure `render.yaml` is present).
+2. Go to [render.com](https://render.com) and sign up for a free account.
+3. Click **New +** -> **Blueprint**.
+4. Connect your GitHub account and select this repository.
+5. Render will automatically detect `render.yaml` and configure your web service.
+6. Once deployed, go to the **Environment** tab in your Render dashboard and add your API key:
    ```
    RAILKIT_API_KEY = your_key_here
    ```
-5. Railway auto-detects `railway.toml` and deploys automatically!
+7. Your service will restart and apply the API key.
 
-Your live URL: `https://your-app.railway.app`
+Your live URL will look like: `https://railway-proxy-xxxx.onrender.com`
