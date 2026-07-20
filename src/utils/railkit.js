@@ -17,12 +17,13 @@ const {
 function initRailKit() {
   const apiKey = process.env.RAILKIT_API_KEY;
   if (!apiKey) {
-    throw new Error(
-      "RAILKIT_API_KEY is not set. Please add it to your .env file or Railway environment variables."
+    console.warn(
+      "⚠️ RAILKIT_API_KEY is not set. Please add it to your .env file or Render environment variables."
     );
+  } else {
+    configure(apiKey);
+    console.log("[RailKit] SDK initialized ✓");
   }
-  configure(apiKey);
-  console.log("[RailKit] SDK initialized ✓");
 }
 
 module.exports = {
