@@ -7,9 +7,10 @@ const {
   getTrainHistory,
   liveAtStation,
   searchTrainBetweenStations,
+  getTrainCoaches,
   getAvailability,
   fareLookup,
-} = require("../utils/railkit");
+} = require("../utils/railradar");
 const { getOrSet, TTL, getCacheStats, flushCache } = require("../middleware/cache");
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -83,6 +84,23 @@ router.get("/train/:trainNo", async (req, res) => {
     return res.status(500).json({ success: false, message: err.message, data: null });
   }
 });
+
+// 2b. Train Coaches
+router.get('/train/:trainNo/coaches', async (req, res) => {
+  const { trainNo } = req.params;
+  try {
+    const { data, cached } = await getOrSet(
+      `train_coaches_${trainNo}`,
+      TTL.TRAIN_INFO,
+      () => getTrainCoaches(trainNo)
+    );
+    res.locals.cached = cached;
+    return res.json({ success: true, cached, ...data });
+  } catch (err) {
+    return res.status(500).json({ success: false, message: err.message, data: null });
+  }
+});
+
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 3. Live Tracking — LIVE (no cache)
@@ -173,68 +191,6 @@ router.get("/search", async (req, res) => {
       cacheKey,
       TTL.SEARCH_TRAINS,
       () => searchTrainBetweenStations(from.toUpperCase(), to.toUpperCase(), date)
-    );
-    res.locals.cached = cached;
-    return res.json({ success: true, cached, ...data });
-  } catch (err) {
-    return res.status(500).json({ success: false, message: err.message, data: null });
-  }
-});
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 7. Seat Availability — LIVE (no cache, real-time)
-//    GET /api/availability?trainNo=&from=&to=&date=&coach=&quota=
-// ─────────────────────────────────────────────────────────────────────────────
-router.get("/availability", async (req, res) => {
-  const { trainNo, from, to, date, coach, quota } = req.query;
-
-  if (!trainNo || !from || !to || !date || !coach || !quota) {
-    return res.status(400).json({
-      success: false,
-      message:
-        "All query params are required: trainNo, from, to, date, coach, quota",
-      data: null,
-    });
-  }
-
-  return safeCall(res, () =>
-    getAvailability(trainNo, from.toUpperCase(), to.toUpperCase(), date, coach, quota)
-  );
-});
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 8. Fare Lookup — CACHED 6h
-//    GET /api/fare?trainNo=&from=&to=&date=&class=&quota=
-// ─────────────────────────────────────────────────────────────────────────────
-router.get("/fare", async (req, res) => {
-  const { trainNo, from, to, date } = req.query;
-  const travelClass = req.query.class;
-  const { quota } = req.query;
-
-  if (!trainNo || !from || !to || !date || !travelClass || !quota) {
-    return res.status(400).json({
-      success: false,
-      message:
-        "All query params are required: trainNo, from, to, date, class, quota",
-      data: null,
-    });
-  }
-
-  const cacheKey = `fare_${trainNo}_${from}_${to}_${date}_${travelClass}_${quota}`;
-
-  try {
-    const { data, cached } = await getOrSet(
-      cacheKey,
-      TTL.FARE_LOOKUP,
-      () =>
-        fareLookup(
-          trainNo,
-          from.toUpperCase(),
-          to.toUpperCase(),
-          date,
-          travelClass,
-          quota
-        )
     );
     res.locals.cached = cached;
     return res.json({ success: true, cached, ...data });

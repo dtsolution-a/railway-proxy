@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-const { initRailKit } = require("./utils/railkit");
+const { initRailKit } = require("./utils/railradar");
 const { requestLogger } = require("./middleware/logger");
 const apiRoutes = require("./routes/api");
 
@@ -23,16 +23,15 @@ app.get("/", (req, res) => {
     success: true,
     name: "Railway API Proxy",
     version: "1.0.0",
-    description: "Proxy server for RailKit API with caching and JSON logging",
+    description: "Proxy server for Rail Radar API with caching and JSON logging",
     endpoints: {
       pnr_status:       "GET /api/pnr/:pnr",
       train_info:       "GET /api/train/:trainNo          (cached 24h)",
+      train_coaches:    "GET /api/train/:trainNo/coaches  (cached 24h)",
       live_tracking:    "GET /api/train/:trainNo/track?date=DD-MM-YYYY",
       train_history:    "GET /api/train/:trainNo/history?date=DD-MM-YYYY  (cached 6h)",
       live_at_station:  "GET /api/station/:code/live?hours=2|4|8",
       search_trains:    "GET /api/search?from=&to=&date=  (cached 12h)",
-      availability:     "GET /api/availability?trainNo=&from=&to=&date=&coach=&quota=",
-      fare_lookup:      "GET /api/fare?trainNo=&from=&to=&date=&class=&quota=  (cached 6h)",
       cache_stats:      "GET /api/cache/stats",
       cache_flush:      "DELETE /api/cache",
     },
