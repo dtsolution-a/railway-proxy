@@ -1,12 +1,11 @@
 const axios = require('axios');
 
-const API_KEY = process.env.RAILKIT_API_KEY; // We can reuse the same env variable, or use RAILRADAR_API_KEY
+const API_KEY = process.env.RAILRADAR_API_KEY || 'rg_5175748b73d94b0fa785f5ae5a112435';
 const BASE_URL = 'https://api.railradar.in/v1';
 
 function getHeaders() {
-  const token = process.env.RAILRADAR_API_KEY || process.env.RAILKIT_API_KEY || 'rg_5175748b73d94b0fa785f5ae5a112435';
   return {
-    'Authorization': `Bearer ${token}`
+    'Authorization': `Bearer ${API_KEY}`
   };
 }
 
