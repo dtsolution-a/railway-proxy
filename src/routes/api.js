@@ -17,7 +17,9 @@ const { getOrSet, TTL, getCacheStats, flushCache } = require("../middleware/cach
 // ─────────────────────────────────────────────────────────────────────────────
 // Helper: wrap any railkit call with consistent error handling
 // ─────────────────────────────────────────────────────────────────────────────
-async function safeCall(res, fn, lang="en") { result = await fn();
+async function safeCall(res, fn, lang="en") {
+  try {
+    let result = await fn();
     result = await deepTranslate(result, lang);
     if (result && result.success === false) {
       return res.status(400).json({
