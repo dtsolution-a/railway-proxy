@@ -1,3 +1,4 @@
+const { deepTranslate } = require('../utils/translator');
 const express = require("express");
 const router = express.Router();
 const {
@@ -16,9 +17,8 @@ const { getOrSet, TTL, getCacheStats, flushCache } = require("../middleware/cach
 // ─────────────────────────────────────────────────────────────────────────────
 // Helper: wrap any railkit call with consistent error handling
 // ─────────────────────────────────────────────────────────────────────────────
-async function safeCall(res, fn) {
-  try {
-    const result = await fn();
+async function safeCall(res, fn, lang="en") { result = await fn();
+    result = await deepTranslate(result, lang);
     if (result && result.success === false) {
       return res.status(400).json({
         success: false,
@@ -79,7 +79,7 @@ router.get("/train/:trainNo", async (req, res) => {
       () => getTrainInfo(trainNo)
     );
     res.locals.cached = cached;
-    return res.json({ success: true, cached, ...data });
+    return res.json(await deepTranslate({ success: true, cached, ...data }, req.query.lang));
   } catch (err) {
     return res.status(500).json({ success: false, message: err.message, data: null });
   }
@@ -95,7 +95,7 @@ router.get('/train/:trainNo/coaches', async (req, res) => {
       () => getTrainCoaches(trainNo)
     );
     res.locals.cached = cached;
-    return res.json({ success: true, cached, ...data });
+    return res.json(await deepTranslate({ success: true, cached, ...data }, req.query.lang));
   } catch (err) {
     return res.status(500).json({ success: false, message: err.message, data: null });
   }
@@ -110,7 +110,7 @@ router.get("/train/:trainNo/track", async (req, res) => {
   const { trainNo } = req.params;
   const { date } = req.query;
 
-  return safeCall(res, () => trackTrain(trainNo, date));
+  return safeCall(res, () => trackTrain(trainNo, date), req.query.lang);
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -129,7 +129,7 @@ router.get("/train/:trainNo/history", async (req, res) => {
       () => getTrainHistory(trainNo, date)
     );
     res.locals.cached = cached;
-    return res.json({ success: true, cached, ...data });
+    return res.json(await deepTranslate({ success: true, cached, ...data }, req.query.lang));
   } catch (err) {
     return res.status(500).json({ success: false, message: err.message, data: null });
   }
@@ -151,7 +151,7 @@ router.get("/station/:code/live", async (req, res) => {
     });
   }
 
-  return safeCall(res, () => liveAtStation(code.toUpperCase(), hours));
+  return safeCall(res, () => liveAtStation(code.toUpperCase(), hours), req.query.lang);
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -178,7 +178,7 @@ router.get("/search", async (req, res) => {
       () => searchTrainBetweenStations(from.toUpperCase(), to.toUpperCase(), date)
     );
     res.locals.cached = cached;
-    return res.json({ success: true, cached, ...data });
+    return res.json(await deepTranslate({ success: true, cached, ...data }, req.query.lang));
   } catch (err) {
     return res.status(500).json({ success: false, message: err.message, data: null });
   }
