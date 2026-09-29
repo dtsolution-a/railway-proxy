@@ -110,14 +110,6 @@ router.get("/train/:trainNo/track", async (req, res) => {
   const { trainNo } = req.params;
   const { date } = req.query;
 
-  if (!date) {
-    return res.status(400).json({
-      success: false,
-      message: "Query param 'date' is required. Format: DD-MM-YYYY",
-      data: null,
-    });
-  }
-
   return safeCall(res, () => trackTrain(trainNo, date));
 });
 
@@ -129,17 +121,10 @@ router.get("/train/:trainNo/history", async (req, res) => {
   const { trainNo } = req.params;
   const { date } = req.query;
 
-  if (!date) {
-    return res.status(400).json({
-      success: false,
-      message: "Query param 'date' is required. Format: DD-MM-YYYY",
-      data: null,
-    });
-  }
-
   try {
+    const cacheKey = date ? `train_history_${trainNo}_${date}` : `train_history_${trainNo}_auto`;
     const { data, cached } = await getOrSet(
-      `train_history_${trainNo}_${date}`,
+      cacheKey,
       TTL.TRAIN_HISTORY,
       () => getTrainHistory(trainNo, date)
     );
