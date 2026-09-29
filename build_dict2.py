@@ -1,4 +1,6 @@
-{
+﻿import json, codecs
+
+data = {
   "stations": {
     "Ahmedabad Jn": "अहमदाबाद जं",
     "Surat": "सूरत",
@@ -140,8 +142,7 @@
     "Dhola Jn": "ढोला जं",
     "Botad": "बोटाद",
     "Sihor": "सिहोर",
-    "Gujarat": "गुजरात",
-    "Ahmedabad": "अहमदाबाद"
+    "Gujarat": "गुजरात"
   },
   "train_suffixes": {
     "Superfast Express": "सुपरफास्ट एक्सप्रेस",
@@ -174,3 +175,7 @@
     "Jn": "जं"
   }
 }
+
+with codecs.open('src/utils/hi_dictionary.json', 'w', 'utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+print("Done:", len(data["stations"]), "stations")

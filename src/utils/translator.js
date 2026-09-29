@@ -10,11 +10,18 @@ if (fs.existsSync(cachePath)) {
 }
 
 // ─── Static Hindi dictionary (instant, no API needed) ─────────────────────
-let hiDict = { stations: {}, train_name_suffixes: {} };
+let hiDict = { stations: {}, train_suffixes: {} };
 const dictPath = path.join(__dirname, 'hi_dictionary.json');
 if (fs.existsSync(dictPath)) {
   try { hiDict = JSON.parse(fs.readFileSync(dictPath, 'utf8')); } catch(e) {}
 }
+
+// Sort suffixes by length descending so longer phrases match first
+const sortedSuffixes = Object.entries(hiDict.train_suffixes || {})
+  .sort((a, b) => b[0].length - a[0].length);
+
+const sortedStations = Object.entries(hiDict.stations || {})
+  .sort((a, b) => b[0].length - a[0].length);
 
 // ─── Serial queue to avoid rate-limiting on Google Translate ──────────────
 const queue = [];
@@ -33,56 +40,84 @@ async function processQueue() {
       fs.writeFileSync(cachePath, JSON.stringify(transCache));
       resolve(res.text);
     } catch (e) {
-      resolve(text); // fallback: return original on error
+      resolve(text);
     }
-    await new Promise(r => setTimeout(r, 80)); // throttle: 1 call per 80ms
+    await new Promise(r => setTimeout(r, 100));
   }
   isProcessing = false;
 }
 
-/**
- * Translate a single string to Hindi.
- * Priority: 1) static dictionary  2) disk cache  3) Google (queued)
- */
-async function translateText(text, lang) {
-  if (!text || typeof text !== 'string' || lang !== 'hi') return text;
-  if (!text.trim()) return text;
-
-  // 1. Exact match in static dictionary
-  if (hiDict.stations[text]) return hiDict.stations[text];
-
-  // 2. Disk/memory cache from previous Google translations
+async function googleTranslate(text) {
   const cacheKey = `${text}_hi`;
   if (transCache[cacheKey]) return transCache[cacheKey];
-
-  // 3. Queue for Google Translate (rate-limited serial calls)
   return new Promise(resolve => {
     queue.push({ text, resolve });
     processQueue();
   });
 }
 
+// ─── Dictionary-based translation ─────────────────────────────────────────
+
 /**
- * Translate train name: replace common English suffixes with Hindi equivalents.
- * E.g. "Surat Mahuva Express" → "सूरत माहुवा एक्सप्रेस"
+ * Translate a station/place name using the static dictionary.
+ * Falls back to Google if not found.
  */
-function translateTrainName(name) {
+async function translateStation(text) {
+  if (!text || typeof text !== 'string') return text;
+  // Exact match
+  if (hiDict.stations[text]) return hiDict.stations[text];
+  // Partial replacement: try replacing known station substrings
+  let result = text;
+  for (const [en, hi] of sortedStations) {
+    if (result.includes(en)) result = result.split(en).join(hi);
+  }
+  if (result !== text) return result;
+  // Fallback to Google Translate
+  return googleTranslate(text);
+}
+
+/**
+ * Translate a train name using dictionary-based word replacement.
+ * Handles names like "Palitana Weekly SF Express" or "Kutch SF Express".
+ */
+function translateTrainNameDict(name) {
   if (!name) return name;
   let result = name;
-  // Replace station name parts
-  for (const [en, hi] of Object.entries(hiDict.stations)) {
-    if (result.includes(en)) result = result.replaceAll(en, hi);
+  // Replace station name parts (longer matches first)
+  for (const [en, hi] of sortedStations) {
+    if (result.includes(en)) result = result.split(en).join(hi);
   }
-  // Replace suffix keywords
-  for (const [en, hi] of Object.entries(hiDict.train_name_suffixes)) {
-    if (result.includes(en)) result = result.replaceAll(en, hi);
+  // Replace train suffix keywords (longer matches first)
+  for (const [en, hi] of sortedSuffixes) {
+    if (result.includes(en)) result = result.split(en).join(hi);
   }
   return result;
 }
 
 /**
- * Deep-translate an API response object.
+ * Translate a train name: dictionary first, Google fallback.
  */
+async function translateTrainName(name) {
+  if (!name) return name;
+  const dictResult = translateTrainNameDict(name);
+  // If dictionary changed something useful, use it
+  if (dictResult !== name) return dictResult;
+  // Otherwise Google
+  return googleTranslate(name);
+}
+
+/**
+ * Detect if a `name` field is a train name (contains train keywords).
+ */
+function isTrainName(text) {
+  if (!text) return false;
+  const trainKeywords = ['Express', 'Mail', 'Rajdhani', 'Shatabdi', 'Duronto',
+    'Garib Rath', 'Humsafar', 'Tejas', 'Vande Bharat', 'Amrit Bharat',
+    'Intercity', 'Passenger', 'Special', 'Superfast', 'Jan Shatabdi'];
+  return trainKeywords.some(k => text.includes(k));
+}
+
+// ─── Deep translate an API response object ─────────────────────────────────
 async function deepTranslate(obj, lang) {
   if (lang !== 'hi') return obj;
   if (!obj) return obj;
@@ -98,22 +133,24 @@ async function deepTranslate(obj, lang) {
     for (const key in obj) {
       const val = obj[key];
 
-      if (key === 'trainName' && typeof val === 'string') {
-        // Try dictionary-based translation first (instant)
-        const dictResult = translateTrainName(val);
-        if (dictResult !== val) {
-          result[key] = dictResult;
+      if (typeof val === 'string') {
+        if (['stationName', 'boardingPoint', 'reservationUpto'].includes(key)) {
+          result[key] = await translateStation(val);
+        } else if (key === 'trainName') {
+          result[key] = await translateTrainName(val);
+        } else if (key === 'name') {
+          // Could be train name or station name — detect and handle
+          if (isTrainName(val)) {
+            result[key] = await translateTrainName(val);
+          } else {
+            result[key] = await translateStation(val);
+          }
         } else {
-          // Fall back to Google Translate
-          result[key] = await translateText(val, lang);
+          result[key] = val;
         }
-      } else if (['name', 'stationName', 'boardingPoint', 'reservationUpto'].includes(key) && typeof val === 'string') {
-        result[key] = await translateText(val, lang);
-      } else if (['from', 'to'].includes(key) && typeof val === 'object' && val !== null) {
-        result[key] = await deepTranslate(val, lang);
       } else if (['route', 'trains', 'history'].includes(key)) {
         result[key] = await deepTranslate(val, lang);
-      } else if (key === 'currentLocation' && typeof val === 'object') {
+      } else if (['from', 'to', 'currentLocation', 'train'].includes(key) && typeof val === 'object' && val !== null) {
         result[key] = await deepTranslate(val, lang);
       } else if (typeof val === 'object' && val !== null && key !== 'coaches') {
         result[key] = await deepTranslate(val, lang);
