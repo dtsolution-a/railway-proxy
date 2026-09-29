@@ -1,4 +1,4 @@
-const { deepTranslate } = require('../utils/translator');
+const { getJourneysOverlay, deepTranslate } = require('../utils/translator');
 const express = require("express");
 const router = express.Router();
 const {
@@ -179,6 +179,36 @@ router.get("/search", async (req, res) => {
       TTL.SEARCH_TRAINS,
       () => searchTrainBetweenStations(from.toUpperCase(), to.toUpperCase(), date)
     );
+    
+    // Fetch live delays dynamically for accurate 'departed' marking
+    try {
+      const trainList = Array.isArray(data) ? data : (data && data.trains ? data.trains : []);
+      if (trainList.length > 0) {
+        const pairs = trainList.map(t => ({
+          train: String(t.train?.number || t.train_no || ''),
+          station: from.toUpperCase()
+        })).filter(p => p.train !== '');
+        
+        if (pairs.length > 0) {
+           const delayResponse = await getJourneysOverlay(pairs);
+           if (delayResponse.success && delayResponse.data && delayResponse.data.delays) {
+              const delayMap = {};
+              delayResponse.data.delays.forEach(d => {
+                 delayMap[d.train] = d.departureDelayMinutes || 0;
+              });
+              trainList.forEach(t => {
+                 const tNum = String(t.train?.number || t.train_no || '');
+                 if (delayMap[tNum] !== undefined) {
+                    t.live_delay_minutes = delayMap[tNum];
+                 }
+              });
+           }
+        }
+      }
+    } catch(e) {
+       console.error("Error fetching live delays overlay", e);
+    }
+    
     res.locals.cached = cached;
     return res.json(await deepTranslate({ success: true, cached, ...data }, req.query.lang));
   } catch (err) {

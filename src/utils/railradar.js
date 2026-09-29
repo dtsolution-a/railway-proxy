@@ -37,6 +37,28 @@ function initRailKit() {
   }
 }
 
+async function requestRadarPost(path, data = {}) {
+  try {
+    const response = await axios.post(`${BASE_URL}${path}`, data, {
+      headers: getHeaders(),
+    });
+    return { success: true, data: response.data.data, meta: response.data.meta };
+  } catch (error) {
+    if (error.response && error.response.data) {
+      return {
+        success: false,
+        message: error.response.data.error?.message || 'Rail Radar API Error',
+        data: null
+      };
+    }
+    return { success: false, message: error.message, data: null };
+  }
+}
+
+async function getJourneysOverlay(pairs) {
+  return requestRadarPost('/journeys/overlay', { pairs });
+}
+
 async function checkPNRStatus(pnr) {
   return requestRadar(`/pnr/${pnr}`);
 }
@@ -80,6 +102,7 @@ async function fareLookup() {
 }
 
 module.exports = {
+  getJourneysOverlay,
   initRailKit,
   checkPNRStatus,
   getTrainInfo,
