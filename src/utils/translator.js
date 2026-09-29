@@ -19,7 +19,7 @@ async function processQueue() {
   
   while (queue.length > 0) {
     const { text, lang, resolve } = queue.shift();
-    const cacheKey = \\_\\;
+    const cacheKey = `${text}_${lang}`;
     
     if (transCache[cacheKey]) {
       resolve(transCache[cacheKey]);
@@ -34,7 +34,6 @@ async function processQueue() {
     } catch (e) {
       resolve(text);
     }
-    // Rate limit prevention
     await new Promise(r => setTimeout(r, 50));
   }
   isProcessing = false;
@@ -43,7 +42,7 @@ async function processQueue() {
 async function translateText(text, lang) {
   if (!text || lang !== 'hi') return text;
   
-  const cacheKey = \\_\\;
+  const cacheKey = `${text}_${lang}`;
   if (transCache[cacheKey]) return transCache[cacheKey];
   
   return new Promise(resolve => {
@@ -57,7 +56,6 @@ async function deepTranslate(obj, lang) {
   if (!obj) return obj;
   
   if (Array.isArray(obj)) {
-    // Process sequentially instead of Promise.all to avoid huge parallel blasts
     const res = [];
     for(const item of obj) {
       res.push(await deepTranslate(item, lang));
