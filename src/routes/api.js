@@ -233,4 +233,24 @@ router.delete("/cache", (req, res) => {
   res.json({ success: true, message: "Cache cleared." });
 });
 
+// =======================================================================================================
+// 7. Ads Configuration (Dynamic Ad Unit IDs)
+//    GET /api/ads/config
+// =======================================================================================================
+router.get("/ads/config", (req, res) => {
+  res.json({
+    success: true,
+    data: {
+      android: {
+        banner_id: "ca-app-pub-6004247106835102/6810231133",
+        native_id: "ca-app-pub-6004247106835102/8561529568"
+      },
+      ios: {
+        banner_id: "ca-app-pub-6004247106835102/6810231133",
+        native_id: "ca-app-pub-6004247106835102/8561529568"
+      }
+    }
+  });
+});
+
 module.exports = router;
