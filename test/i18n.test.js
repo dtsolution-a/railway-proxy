@@ -82,3 +82,15 @@ test('quota text', () => {
   assert.equal(hi({ quota: 'GN' }).quota, 'सामान्य (GN)');
   assert.equal(hi({ quota: 'TATKAL' }).quota, 'तत्काल');
 });
+
+test('station board entries: names localised, live codes untouched', () => {
+  const out = hi({ data: { station: { code: 'INDB', name: 'Indore Junction' }, trains: [{
+    train: { number: '12919', name: 'Malwa SF Express', type: 'Superfast Express', source: 'INDB', destination: 'SVDK', runDays: ['mon'] },
+    stop: { departure: '23:55' }, live: { type: 'at-station', platform: '4', delayMinutes: 0 } }] } });
+  const t = out.data.trains[0];
+  assert.equal(t.train.name, 'मालवा सुपरफास्ट एक्सप्रेस');
+  assert.equal(t.train.type, 'सुपरफास्ट एक्सप्रेस');
+  assert.equal(t.train.source, 'INDB');
+  assert.equal(t.live.type, 'at-station');
+  assert.match(out.data.station.name, /इंदौर/);
+});

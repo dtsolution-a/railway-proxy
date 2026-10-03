@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
       train_coaches:    "GET /api/train/:trainNo/coaches  (cached 24h)",
       live_tracking:    "GET /api/train/:trainNo/track?date=DD-MM-YYYY",
       train_history:    "GET /api/train/:trainNo/history?date=DD-MM-YYYY  (cached 6h)",
-      live_at_station:  "GET /api/station/:code/live?hours=2|4|8",
+      live_at_station:  "GET /api/station/:code/live?hours=2|4|6|8",
       search_trains:    "GET /api/search?from=&to=&date=  (cached 12h)",
       cache_stats:      "GET /api/cache/stats",
       cache_flush:      "DELETE /api/cache",

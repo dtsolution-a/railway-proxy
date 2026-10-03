@@ -82,7 +82,7 @@ const MESSAGES = [
   [/(live|running|tracking).*(not available|unavailable|no data)|no live data/i, 'इस ट्रेन का लाइव डेटा अभी उपलब्ध नहीं है।'],
   [/station.*not found|invalid station/i, 'स्टेशन नहीं मिला। कृपया स्टेशन कोड जाँचें।'],
   [/'from' and 'to' are required/i, 'कृपया दोनों स्टेशन चुनें।'],
-  [/'hours' must be/i, 'घंटे 2, 4 या 8 में से कोई एक होना चाहिए।'],
+  [/'hours' must be/i, 'घंटे 2, 4, 6 या 8 में से कोई एक होना चाहिए।'],
   [/availability feature is discontinued/i, 'सीट उपलब्धता की सुविधा अब उपलब्ध नहीं है।'],
   [/fare feature is discontinued/i, 'किराया जानकारी की सुविधा अब उपलब्ध नहीं है।'],
   [/route not found/i, 'अनुरोधित पेज नहीं मिला।'],

@@ -135,14 +135,14 @@ router.get("/train/:trainNo/history", async (req, res) => {
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 5. Live At Station — LIVE (no cache)
-//    GET /api/station/:code/live?hours=2|4|8
+//    GET /api/station/:code/live?hours=2|4|6|8
 // ─────────────────────────────────────────────────────────────────────────────
 router.get("/station/:code/live", async (req, res) => {
   const { code } = req.params;
   const hours = parseInt(req.query.hours) || 2;
 
-  if (![2, 4, 8].includes(hours)) {
-    return fail(req, res, 400, "Query param 'hours' must be 2, 4, or 8.");
+  if (![2, 4, 6, 8].includes(hours)) {
+    return fail(req, res, 400, "Query param 'hours' must be 2, 4, 6, or 8.");
   }
 
   return safeCall(req, res, () => liveAtStation(code.toUpperCase(), hours));
