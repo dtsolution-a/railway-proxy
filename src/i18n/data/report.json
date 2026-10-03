@@ -1,0 +1,2470 @@
+{
+ "rejected": [
+  {
+   "code": "IDH",
+   "ir": "IDGAH AGRA JN",
+   "wikidataEn": "Idgah",
+   "wikidataHi": "ईदगाह",
+   "similarity": 0.5
+  },
+  {
+   "code": "CV",
+   "ir": "KAVERI",
+   "wikidataEn": "Cauvery",
+   "wikidataHi": "कौवेरी",
+   "similarity": 0.5
+  },
+  {
+   "code": "MM",
+   "ir": "MUMBAI MAHIM JN",
+   "wikidataEn": "Mahim Junction",
+   "wikidataHi": "माहिम",
+   "similarity": 0.4
+  },
+  {
+   "code": "MXT",
+   "ir": "MALAKPET KACHEGUDA",
+   "wikidataEn": "Malakpet",
+   "wikidataHi": "मलकपेट काचीगुडा",
+   "similarity": 0.56
+  },
+  {
+   "code": "SBC",
+   "ir": "BANGALORE CITY JN",
+   "wikidataEn": "Krantivira Sangolli Rayanna",
+   "wikidataHi": "क्रांतिवीर संगोली रायण्णा",
+   "similarity": 0.31
+  },
+  {
+   "code": "OLR",
+   "ir": "THRISSUR OLLUR HALT",
+   "wikidataEn": "Ollur",
+   "wikidataHi": "ओल्लुर",
+   "similarity": 0.33
+  },
+  {
+   "code": "UMD",
+   "ir": "USMANABAD",
+   "wikidataEn": "Dharashiv",
+   "wikidataHi": "धाराशिव",
+   "similarity": 0
+  },
+  {
+   "code": "SIN",
+   "ir": "MUMBAI SION",
+   "wikidataEn": "Sion",
+   "wikidataHi": "सायन",
+   "similarity": 0.4
+  },
+  {
+   "code": "DQR",
+   "ir": "KACHEGUDA DBR",
+   "wikidataEn": "Dabirpura",
+   "wikidataHi": "काचीगुडा डी बी आर",
+   "similarity": 0.14
+  },
+  {
+   "code": "KIG",
+   "ir": "KOLAGHAT GOODS",
+   "wikidataEn": "Kolaghat",
+   "wikidataHi": "कोलाघाट",
+   "similarity": 0.57
+  },
+  {
+   "code": "MAQ",
+   "ir": "MANGALORE CNTL",
+   "wikidataEn": "Mangalore Central",
+   "wikidataHi": "मैंगलोर सेंट्रल",
+   "similarity": 0.56
+  },
+  {
+   "code": "ATT",
+   "ir": "ATARI",
+   "wikidataEn": "Atari Shyam Singh",
+   "wikidataHi": "अटारी शयाम सिंह",
+   "similarity": 0.25
+  },
+  {
+   "code": "HEN",
+   "ir": "Heria Ph",
+   "wikidataEn": "Henria",
+   "wikidataHi": "हेंडिया",
+   "similarity": 0
+  },
+  {
+   "code": "STLB",
+   "ir": "Sitalpur Bengal",
+   "wikidataEn": "Sitalpur",
+   "wikidataHi": "शीतलपुर",
+   "similarity": 0.56
+  },
+  {
+   "code": "KCVL",
+   "ir": "KOCHUVELI",
+   "wikidataEn": "Thiruvananthapuram North",
+   "wikidataHi": "कोचुवेली",
+   "similarity": 0.11
+  },
+  {
+   "code": "KOAA",
+   "ir": "KOLKATA CHITPUR",
+   "wikidataEn": "Kolkata",
+   "wikidataHi": "कोलकाता",
+   "similarity": 0.5
+  },
+  {
+   "code": "RMRB",
+   "ir": "Ramnagar Bengal",
+   "wikidataEn": "Ramnagar",
+   "wikidataHi": "रामनगर",
+   "similarity": 0.56
+  },
+  {
+   "code": "DCOP",
+   "ir": "DURGAPUR COKE OVEN PLANT EXCHANGE YARD SDG WARIA",
+   "wikidataEn": "Durgapur Coke Oven Plant",
+   "wikidataHi": "दुर्गापुर कोक ओभेन पलान्ट",
+   "similarity": 0.5
+  },
+  {
+   "code": "BBDA",
+   "ir": "BARBENDA (RNC DIVISION)",
+   "wikidataEn": "Barbenda",
+   "wikidataHi": "बारबेन्दा",
+   "similarity": 0.42
+  },
+  {
+   "code": "BLYH",
+   "ir": "BALIHALT",
+   "wikidataEn": "Bally Halt",
+   "wikidataHi": "बालि हाल्ट",
+   "similarity": 0.5
+  },
+  {
+   "code": "SOJN",
+   "ir": "SIHOR GUJARAT",
+   "wikidataEn": "Sihor Junction",
+   "wikidataHi": "सिहोर जंक्शन",
+   "similarity": 0.33
+  },
+  {
+   "code": "KLW",
+   "ir": "Kalwan Halt",
+   "wikidataEn": "Kulpi",
+   "wikidataHi": "कूलपि",
+   "similarity": 0.5
+  },
+  {
+   "code": "BBDB",
+   "ir": "BENOY BADAL DINESH GARDENS",
+   "wikidataEn": "B.B.D Bag",
+   "wikidataHi": "बि. बि. दि बाग",
+   "similarity": 0.21
+  },
+  {
+   "code": "JHS",
+   "ir": "JHANSI JN",
+   "wikidataEn": "Veerangana Laxmibai",
+   "wikidataHi": "वीरांगना लक्ष्मीबाई झांसी",
+   "similarity": 0.2
+  },
+  {
+   "code": "KOP",
+   "ir": "C SHAHU M RAJ KOLHAPUR TERM",
+   "wikidataEn": "Chattrapati Shahu Maharaj Terminus",
+   "wikidataHi": "छत्रपति शाहु महाराज ट्रमिनस",
+   "similarity": 0.25
+  },
+  {
+   "code": "DGHA",
+   "ir": "Digha Flag Station",
+   "wikidataEn": "Digha",
+   "wikidataHi": "दीघा",
+   "similarity": 0.22
+  },
+  {
+   "code": "GMO",
+   "ir": "GOMOH JN",
+   "wikidataEn": "Netaji Subhas Chandra Bose Gomoh",
+   "wikidataHi": "नेताजी सुभाष चन्द्र बोस गोमोह",
+   "similarity": 0.14
+  },
+  {
+   "code": "TKVR",
+   "ir": "TAPPA KHAJURIAY",
+   "wikidataEn": "Teknewas",
+   "wikidataHi": "टेकनिवास",
+   "similarity": 0.33
+  },
+  {
+   "code": "DAKE",
+   "ir": "DAKSHINESWAR",
+   "wikidataEn": "Sagnik Pramanik",
+   "wikidataHi": "दक्षिणेश्वर",
+   "similarity": 0.11
+  },
+  {
+   "code": "TN",
+   "ir": "TUTICORIN",
+   "wikidataEn": "Thoothukudi",
+   "wikidataHi": "तूतुकुडि",
+   "similarity": 0.4
+  },
+  {
+   "code": "AWB",
+   "ir": "AURANGABAD",
+   "wikidataEn": "Chhatrapati Sambhaji Nagar",
+   "wikidataHi": "छत्रपति संभाजी नगर",
+   "similarity": 0.17
+  },
+  {
+   "code": "YKA",
+   "ir": "YAKUTPURA KACHEGUDA",
+   "wikidataEn": "Yakutpura",
+   "wikidataHi": "याकुतपुरा कचेगुडा",
+   "similarity": 0.56
+  },
+  {
+   "code": "RRE",
+   "ir": "Rahul Road",
+   "wikidataEn": "Rahui Road",
+   "wikidataHi": "राहुल रोड",
+   "similarity": 0.5
+  },
+  {
+   "code": "GVG",
+   "ir": "GOVINDGARH",
+   "wikidataEn": "Mandi Gobindgarh",
+   "wikidataHi": "मंड़ी गोबिंदगढ़",
+   "similarity": 0.56
+  },
+  {
+   "code": "AWS",
+   "ir": "ASWANI HALT",
+   "wikidataEn": "Awasani",
+   "wikidataHi": "अवसानी",
+   "similarity": 0.33
+  },
+  {
+   "code": "FOCM",
+   "ir": "FLYOVER CABIN MUGHALSARAI",
+   "wikidataEn": "Flyover cabin, Pandit Deen Dayal Upadhyaya Nagar",
+   "wikidataHi": "फलाईओवर केविन, पंडित दीन दयाल उपाध्याय नगर",
+   "similarity": 0.42
+  },
+  {
+   "code": "KHNP",
+   "ir": "Khanapur Deccan",
+   "wikidataEn": "Khanapur",
+   "wikidataHi": "खानापुर जंक्शन",
+   "similarity": 0.57
+  },
+  {
+   "code": "UBL",
+   "ir": "HUBLI JN",
+   "wikidataEn": "Shree Siddharoodha Swamiji - Hubballi Junction",
+   "wikidataHi": "श्री सिद्धारूढ़ स्वामीजी - हुब्बल्ली जंक्शन",
+   "similarity": 0.17
+  },
+  {
+   "code": "MHOW",
+   "ir": "Mhow",
+   "wikidataEn": "Dr. Ambedkar Nagar",
+   "wikidataHi": "डॉ॰ आंबेडकर नगर",
+   "similarity": 0.1
+  },
+  {
+   "code": "KFE",
+   "ir": "KURIKAD",
+   "wikidataEn": "Chottanikkara Road",
+   "wikidataHi": "चोट्टानिक्करा रोड़",
+   "similarity": 0.2
+  },
+  {
+   "code": "DON",
+   "ir": "DERAWAN HALT",
+   "wikidataEn": "Donta",
+   "wikidataHi": "दोन्त",
+   "similarity": 0.25
+  },
+  {
+   "code": "SZB",
+   "ir": "SARONA CABIN",
+   "wikidataEn": "Sarona",
+   "wikidataHi": "सरोना केविन",
+   "similarity": 0.5
+  },
+  {
+   "code": "JID",
+   "ir": "JAGI ROAD",
+   "wikidataEn": "Jagiroad",
+   "wikidataHi": "जागी रोड",
+   "similarity": 0.5
+  },
+  {
+   "code": "ETK",
+   "ir": "ETAKKOT",
+   "wikidataEn": "Edakkad",
+   "wikidataHi": "एडक्काड",
+   "similarity": 0.33
+  },
+  {
+   "code": "PGTN",
+   "ir": "PALGHAT TOWN",
+   "wikidataEn": "Palakkad Town",
+   "wikidataHi": "पालक्कड़ टाउन",
+   "similarity": 0.5
+  },
+  {
+   "code": "DHE",
+   "ir": "Dodhi",
+   "wikidataEn": "Dobhi",
+   "wikidataHi": "डोभी",
+   "similarity": 0.5
+  },
+  {
+   "code": "NACC",
+   "ir": "NEW ALIPUR (CALCUTTA)",
+   "wikidataEn": "New Alipore",
+   "wikidataHi": "नियु अलिपुर",
+   "similarity": 0.56
+  },
+  {
+   "code": "BNBH",
+   "ir": "BANI BIHAR",
+   "wikidataEn": "Vani Vihar",
+   "wikidataHi": "वाणी विहार",
+   "similarity": 0.5
+  },
+  {
+   "code": "BBSN",
+   "ir": "BHUBANESWAR NEW",
+   "wikidataEn": "New Bhubaneswar",
+   "wikidataHi": "न्यू भुवनेश्वर",
+   "similarity": 0.5
+  },
+  {
+   "code": "FTD",
+   "ir": "Fatehabad Chowk Junction",
+   "wikidataEn": "Fatehabad Chandrawatiganj Junction",
+   "wikidataHi": "फतेहबाद चंद्रावतीगंज जंक्शन",
+   "similarity": 0.46
+  },
+  {
+   "code": "NIA",
+   "ir": "NAILA",
+   "wikidataEn": "Janjgir Naila",
+   "wikidataHi": "जंजगिर नैला",
+   "similarity": 0.29
+  },
+  {
+   "code": "KNDV",
+   "ir": "KNDV",
+   "wikidataEn": "Krishnadevaraya halt",
+   "wikidataHi": "कृष्णदेवराया हाल्ट",
+   "similarity": 0.5
+  },
+  {
+   "code": "BCOB",
+   "ir": "BHACHAU BG",
+   "wikidataEn": "Bhachau",
+   "wikidataHi": "भचाऊ",
+   "similarity": 0.5
+  },
+  {
+   "code": "HBD",
+   "ir": "HOSHANGABAD",
+   "wikidataEn": "Narmadapuram",
+   "wikidataHi": "नर्मदापुरम",
+   "similarity": 0.14
+  },
+  {
+   "code": "MGL",
+   "ir": "MANGELA",
+   "wikidataEn": "Mugalalli",
+   "wikidataHi": "मुगलल्लि",
+   "similarity": 0.5
+  },
+  {
+   "code": "DPUR",
+   "ir": "Dadpur",
+   "wikidataEn": "Depur P.H.",
+   "wikidataHi": "देपुर पी एच",
+   "similarity": 0.5
+  },
+  {
+   "code": "NWBV",
+   "ir": "NWBV",
+   "wikidataEn": "Vijayawada New West cabin",
+   "wikidataHi": "विजयवाड़ा न्यु वेस्ट केविन",
+   "similarity": 0.3
+  },
+  {
+   "code": "COAC",
+   "ir": "Coac",
+   "wikidataEn": "Kakinada Port C Cabin",
+   "wikidataHi": "काकीनाड़ा पोर्ट सी केविन",
+   "similarity": 0.1
+  },
+  {
+   "code": "KRAI",
+   "ir": "KAHET",
+   "wikidataEn": "Kaher",
+   "wikidataHi": "कहेर",
+   "similarity": 0.5
+  },
+  {
+   "code": "SVM",
+   "ir": "SANVERDAM CHUCH",
+   "wikidataEn": "Curchorem",
+   "wikidataHi": "कुडचडे",
+   "similarity": 0.25
+  },
+  {
+   "code": "DMF",
+   "ir": "Dumerta",
+   "wikidataEn": "Dumetra",
+   "wikidataHi": "दुमेत्रा",
+   "similarity": 0.5
+  },
+  {
+   "code": "KPCM",
+   "ir": "KUWARCHINTAWA",
+   "wikidataEn": "Kunwarpur Chintamanpur",
+   "wikidataHi": "कुवर चिंतावा",
+   "similarity": 0.46
+  },
+  {
+   "code": "KSMB",
+   "ir": "KASTLA KASMABAD",
+   "wikidataEn": "Kusumha Bihar Halt",
+   "wikidataHi": "कुसुमाहा बिहार हाल्ट",
+   "similarity": 0.44
+  },
+  {
+   "code": "SGAC",
+   "ir": "SOGARIYA CABIN",
+   "wikidataEn": "Sogariya",
+   "wikidataHi": "सोगरिया",
+   "similarity": 0.57
+  },
+  {
+   "code": "JGLP",
+   "ir": "JGLP",
+   "wikidataEn": "Jatingalampur",
+   "wikidataHi": "जाटिंगा लामपूर",
+   "similarity": 0.5
+  },
+  {
+   "code": "GOPL",
+   "ir": "GUNDLA POCHAMPALLI",
+   "wikidataEn": "Gopalganj",
+   "wikidataHi": "गोपालगंज",
+   "similarity": 0.22
+  },
+  {
+   "code": "LNMA",
+   "ir": "LNMA",
+   "wikidataEn": "Lakhan Majra",
+   "wikidataHi": "लाखन माजरा",
+   "similarity": 0.5
+  },
+  {
+   "code": "ARL",
+   "ir": "AROUL",
+   "wikidataEn": "Aroul Makanpur",
+   "wikidataHi": "अरौल मकनपुर",
+   "similarity": 0.29
+  },
+  {
+   "code": "PRM",
+   "ir": "PIRUMADARA",
+   "wikidataEn": "সিরুবা দাদা",
+   "wikidataHi": "पीरूमदारा",
+   "similarity": 0
+  }
+ ],
+ "misaligned": [
+  {
+   "word": "kolkata",
+   "hindi": "सियालदह",
+   "votes": 1
+  },
+  {
+   "word": "sealdah",
+   "hindi": "जंक्शन",
+   "votes": 1
+  },
+  {
+   "word": "hatia",
+   "hindi": "हटिया",
+   "votes": 1
+  },
+  {
+   "word": "hitech",
+   "hindi": "हाईटेक",
+   "votes": 1
+  },
+  {
+   "word": "term",
+   "hindi": "टर्मिनस",
+   "votes": 1
+  },
+  {
+   "word": "machilipatnam",
+   "hindi": "मछलीपट्टनम",
+   "votes": 1
+  },
+  {
+   "word": "old",
+   "hindi": "दिल्ली",
+   "votes": 1
+  },
+  {
+   "word": "triplicane",
+   "hindi": "तिरुवल्लिकेणि",
+   "votes": 1
+  },
+  {
+   "word": "thrisur",
+   "hindi": "तृश्शुर",
+   "votes": 1
+  },
+  {
+   "word": "udagamandalam",
+   "hindi": "ऊटी",
+   "votes": 1
+  },
+  {
+   "word": "luckeesarai",
+   "hindi": "लखीसराय",
+   "votes": 1
+  },
+  {
+   "word": "arts",
+   "hindi": "आर्ट्स",
+   "votes": 1
+  },
+  {
+   "word": "asangaon",
+   "hindi": "आसनगांव",
+   "votes": 1
+  },
+  {
+   "word": "atgaon",
+   "hindi": "आटगांव",
+   "votes": 1
+  },
+  {
+   "word": "shakti",
+   "hindi": "शक्तिनगर",
+   "votes": 1
+  },
+  {
+   "word": "barh",
+   "hindi": "बाढ़",
+   "votes": 1
+  },
+  {
+   "word": "hirangaon",
+   "hindi": "हिरनगाँव",
+   "votes": 1
+  },
+  {
+   "word": "duan",
+   "hindi": "डुंया",
+   "votes": 1
+  },
+  {
+   "word": "khirai",
+   "hindi": "क्षीराइ",
+   "votes": 1
+  },
+  {
+   "word": "ballia",
+   "hindi": "बलिया",
+   "votes": 1
+  },
+  {
+   "word": "edavai",
+   "hindi": "इडवा",
+   "votes": 1
+  },
+  {
+   "word": "naigaon",
+   "hindi": "नायगांव",
+   "votes": 1
+  },
+  {
+   "word": "tondiarpettai",
+   "hindi": "तांण्डैयारपेट",
+   "votes": 1
+  },
+  {
+   "word": "tundla",
+   "hindi": "टूण्डला",
+   "votes": 1
+  },
+  {
+   "word": "square",
+   "hindi": "स्क्वायर",
+   "votes": 1
+  },
+  {
+   "word": "madgaon",
+   "hindi": "मडगांव",
+   "votes": 1
+  },
+  {
+   "word": "bombay",
+   "hindi": "मस्जिद",
+   "votes": 1
+  },
+  {
+   "word": "masjid",
+   "hindi": "बंदर",
+   "votes": 1
+  },
+  {
+   "word": "alleppey",
+   "hindi": "आलाप्पुड़ा",
+   "votes": 1
+  },
+  {
+   "word": "azamgarh",
+   "hindi": "आजमगढ़",
+   "votes": 1
+  },
+  {
+   "word": "daya",
+   "hindi": "दया",
+   "votes": 1
+  },
+  {
+   "word": "guindy",
+   "hindi": "गिण्डि",
+   "votes": 1
+  },
+  {
+   "word": "light",
+   "hindi": "लाईट",
+   "votes": 1
+  },
+  {
+   "word": "pundooah",
+   "hindi": "पान्डुया",
+   "votes": 1
+  },
+  {
+   "word": "talandu",
+   "hindi": "तालान्डू",
+   "votes": 1
+  },
+  {
+   "word": "mankundu",
+   "hindi": "मानकून्डू",
+   "votes": 1
+  },
+  {
+   "word": "chanchai",
+   "hindi": "चाँचाई",
+   "votes": 1
+  },
+  {
+   "word": "falls",
+   "hindi": "फाल",
+   "votes": 1
+  },
+  {
+   "word": "plassey",
+   "hindi": "पलाशी",
+   "votes": 1
+  },
+  {
+   "word": "howbagh",
+   "hindi": "हाउबाग",
+   "votes": 1
+  },
+  {
+   "word": "nature",
+   "hindi": "नेचर",
+   "votes": 1
+  },
+  {
+   "word": "cooch",
+   "hindi": "कूचबिहार",
+   "votes": 1
+  },
+  {
+   "word": "behar",
+   "hindi": "जंक्शन",
+   "votes": 1
+  },
+  {
+   "word": "krishnamohan",
+   "hindi": "कृष्ण",
+   "votes": 1
+  },
+  {
+   "word": "avutapale",
+   "hindi": "आवुटपल्लि",
+   "votes": 1
+  },
+  {
+   "word": "angua",
+   "hindi": "आंगूया",
+   "votes": 1
+  },
+  {
+   "word": "pandabeswar",
+   "hindi": "पांडवेश्र्वर",
+   "votes": 1
+  },
+  {
+   "word": "gudaparti",
+   "hindi": "गूडपर्ति",
+   "votes": 1
+  },
+  {
+   "word": "patal",
+   "hindi": "इन्दौर",
+   "votes": 1
+  },
+  {
+   "word": "bhattu",
+   "hindi": "भाट्टू",
+   "votes": 1
+  },
+  {
+   "word": "yedahli",
+   "hindi": "यडहल्लि",
+   "votes": 1
+  },
+  {
+   "word": "naba",
+   "hindi": "नवग्राम",
+   "votes": 1
+  },
+  {
+   "word": "kanku",
+   "hindi": "हाल्ट",
+   "votes": 1
+  },
+  {
+   "word": "mile",
+   "hindi": "माईल",
+   "votes": 1
+  },
+  {
+   "word": "mahisha",
+   "hindi": "महिषासुर",
+   "votes": 1
+  },
+  {
+   "word": "sahadai",
+   "hindi": "सहदाई",
+   "votes": 1
+  },
+  {
+   "word": "jangaon",
+   "hindi": "जनगांव",
+   "votes": 1
+  },
+  {
+   "word": "nayagaon",
+   "hindi": "नयागांव",
+   "votes": 1
+  },
+  {
+   "word": "pancheberia",
+   "hindi": "पाँचबेड़िया",
+   "votes": 1
+  },
+  {
+   "word": "aranghata",
+   "hindi": "आड़ंघाटा",
+   "votes": 1
+  },
+  {
+   "word": "valathoor",
+   "hindi": "वलत्तुर",
+   "votes": 1
+  },
+  {
+   "word": "dainhat",
+   "hindi": "दाँईहाट",
+   "votes": 1
+  },
+  {
+   "word": "rayanapad",
+   "hindi": "रायनपाडु",
+   "votes": 1
+  },
+  {
+   "word": "divine",
+   "hindi": "डिवाइन",
+   "votes": 1
+  },
+  {
+   "word": "etah",
+   "hindi": "ईटा",
+   "votes": 1
+  },
+  {
+   "word": "barai",
+   "hindi": "बराई",
+   "votes": 1
+  },
+  {
+   "word": "chandiposi",
+   "hindi": "चण्डीपोस",
+   "votes": 1
+  },
+  {
+   "word": "chaygaon",
+   "hindi": "छायगांव",
+   "votes": 1
+  },
+  {
+   "word": "odai",
+   "hindi": "उदई",
+   "votes": 1
+  },
+  {
+   "word": "on",
+   "hindi": "आंन",
+   "votes": 1
+  },
+  {
+   "word": "kashti",
+   "hindi": "काष्टी",
+   "votes": 1
+  },
+  {
+   "word": "padhegaon",
+   "hindi": "पढ़ेगांव",
+   "votes": 1
+  },
+  {
+   "word": "abu",
+   "hindi": "आबू",
+   "votes": 1
+  },
+  {
+   "word": "ulubaria",
+   "hindi": "ऊलूबेड़िया",
+   "votes": 1
+  },
+  {
+   "word": "adgaon",
+   "hindi": "अडगांव",
+   "votes": 1
+  },
+  {
+   "word": "ashti",
+   "hindi": "आष्टी",
+   "votes": 1
+  },
+  {
+   "word": "tatwar",
+   "hindi": "टटवाड़ा",
+   "votes": 1
+  },
+  {
+   "word": "khandip",
+   "hindi": "खण्डीप",
+   "votes": 1
+  },
+  {
+   "word": "dundi",
+   "hindi": "डुन्डी",
+   "votes": 1
+  },
+  {
+   "word": "tindharia",
+   "hindi": "तीनधरिया",
+   "votes": 1
+  },
+  {
+   "word": "avati",
+   "hindi": "अवतिहल्लि",
+   "votes": 1
+  },
+  {
+   "word": "bagahai",
+   "hindi": "बघई",
+   "votes": 1
+  },
+  {
+   "word": "pipe",
+   "hindi": "पाईप",
+   "votes": 1
+  },
+  {
+   "word": "sdrgh",
+   "hindi": "सरदारगढ़",
+   "votes": 1
+  },
+  {
+   "word": "panikhaiti",
+   "hindi": "पानीक्हाईटि",
+   "votes": 1
+  },
+  {
+   "word": "tik",
+   "hindi": "टीक",
+   "votes": 1
+  },
+  {
+   "word": "dhamalgaon",
+   "hindi": "धमालगाँव",
+   "votes": 1
+  },
+  {
+   "word": "jamgaon",
+   "hindi": "जामगांव",
+   "votes": 1
+  },
+  {
+   "word": "shamgarh",
+   "hindi": "शामगढ़",
+   "votes": 1
+  },
+  {
+   "word": "varangaon",
+   "hindi": "वरनगांव",
+   "votes": 1
+  },
+  {
+   "word": "tsunduru",
+   "hindi": "सुन्डुरू",
+   "votes": 1
+  },
+  {
+   "word": "nanjangud",
+   "hindi": "नन्जनगुड",
+   "votes": 1
+  },
+  {
+   "word": "amgaon",
+   "hindi": "आमगांव",
+   "votes": 1
+  },
+  {
+   "word": "kanthan",
+   "hindi": "कन्हान",
+   "votes": 1
+  },
+  {
+   "word": "anaimalai",
+   "hindi": "एस.जी.",
+   "votes": 1
+  },
+  {
+   "word": "thadi",
+   "hindi": "ताडि",
+   "votes": 1
+  },
+  {
+   "word": "gaigaon",
+   "hindi": "गईगांव",
+   "votes": 1
+  },
+  {
+   "word": "nagjihari",
+   "hindi": "नागझरी",
+   "votes": 1
+  },
+  {
+   "word": "gangava",
+   "hindi": "गन्गवदि",
+   "votes": 1
+  },
+  {
+   "word": "sithalavai",
+   "hindi": "सित्तलवाय",
+   "votes": 1
+  },
+  {
+   "word": "kuiyan",
+   "hindi": "कूयां",
+   "votes": 1
+  },
+  {
+   "word": "paith",
+   "hindi": "पेठ",
+   "votes": 1
+  },
+  {
+   "word": "raigadh",
+   "hindi": "रायगढ़",
+   "votes": 1
+  },
+  {
+   "word": "plgh",
+   "hindi": "पलंगनातम",
+   "votes": 1
+  },
+  {
+   "word": "mg",
+   "hindi": "एमजी",
+   "votes": 1
+  },
+  {
+   "word": "cheoki",
+   "hindi": "छिवँकी",
+   "votes": 1
+  },
+  {
+   "word": "diamond",
+   "hindi": "डायमंड",
+   "votes": 1
+  },
+  {
+   "word": "payangadi",
+   "hindi": "पयंगडि",
+   "votes": 1
+  },
+  {
+   "word": "sakti",
+   "hindi": "शाक्ति",
+   "votes": 1
+  },
+  {
+   "word": "gadhara",
+   "hindi": "गढ़डा",
+   "votes": 1
+  },
+  {
+   "word": "atamanda",
+   "hindi": "अटामाँण्ड",
+   "votes": 1
+  },
+  {
+   "word": "gahndran",
+   "hindi": "गांधरां",
+   "votes": 1
+  },
+  {
+   "word": "salai",
+   "hindi": "सलाई",
+   "votes": 1
+  },
+  {
+   "word": "ratangaon",
+   "hindi": "रतनगाँव",
+   "votes": 1
+  },
+  {
+   "word": "patohan",
+   "hindi": "पटोहां",
+   "votes": 1
+  },
+  {
+   "word": "mai",
+   "hindi": "माई",
+   "votes": 1
+  },
+  {
+   "word": "vailapuzha",
+   "hindi": "वल्लप्पुषा",
+   "votes": 1
+  },
+  {
+   "word": "lovedale",
+   "hindi": "लवडेल",
+   "votes": 1
+  },
+  {
+   "word": "mayyanad",
+   "hindi": "मय्यनाड",
+   "votes": 1
+  },
+  {
+   "word": "gossaigaon",
+   "hindi": "गोसाईगाँव",
+   "votes": 1
+  },
+  {
+   "word": "gujhandi",
+   "hindi": "गुजहान्डी",
+   "votes": 1
+  },
+  {
+   "word": "sirkazhi",
+   "hindi": "शीरकाषि",
+   "votes": 1
+  },
+  {
+   "word": "daltonganj",
+   "hindi": "डालटनगंज",
+   "votes": 1
+  },
+  {
+   "word": "dharangaon",
+   "hindi": "धरनगांव",
+   "votes": 1
+  },
+  {
+   "word": "taraon",
+   "hindi": "तरांव",
+   "votes": 1
+  },
+  {
+   "word": "right",
+   "hindi": "राईट",
+   "votes": 1
+  },
+  {
+   "word": "bochaha",
+   "hindi": "बोछआ",
+   "votes": 1
+  },
+  {
+   "word": "indi",
+   "hindi": "इन्डि",
+   "votes": 1
+  },
+  {
+   "word": "acharya",
+   "hindi": "आचार्य",
+   "votes": 1
+  },
+  {
+   "word": "narendra",
+   "hindi": "नरेन्द्र",
+   "votes": 1
+  },
+  {
+   "word": "jawai",
+   "hindi": "जवाई",
+   "votes": 1
+  },
+  {
+   "word": "quilandi",
+   "hindi": "कोयिलांडि",
+   "votes": 1
+  },
+  {
+   "word": "rau",
+   "hindi": "राउ",
+   "votes": 1
+  },
+  {
+   "word": "jakhanian",
+   "hindi": "जखनियां",
+   "votes": 1
+  },
+  {
+   "word": "dhai",
+   "hindi": "धाइ",
+   "votes": 1
+  },
+  {
+   "word": "manda",
+   "hindi": "माण्डा",
+   "votes": 1
+  },
+  {
+   "word": "itayakalan",
+   "hindi": "इटायाकलां",
+   "votes": 1
+  },
+  {
+   "word": "haiaghat",
+   "hindi": "हायाघाट",
+   "votes": 1
+  },
+  {
+   "word": "bhandai",
+   "hindi": "भांडाइ",
+   "votes": 1
+  },
+  {
+   "word": "orange",
+   "hindi": "औरेंज",
+   "votes": 1
+  },
+  {
+   "word": "dhang",
+   "hindi": "ढ़ाग",
+   "votes": 1
+  },
+  {
+   "word": "ajhai",
+   "hindi": "अजहई",
+   "votes": 1
+  },
+  {
+   "word": "majhagawan",
+   "hindi": "मझगवां",
+   "votes": 1
+  },
+  {
+   "word": "mahendragarh",
+   "hindi": "महेन्द्रगढ़",
+   "votes": 1
+  },
+  {
+   "word": "auvaneeswaram",
+   "hindi": "आवणीश्र्वरम",
+   "votes": 1
+  },
+  {
+   "word": "dagarhkeri",
+   "hindi": "दगड़खेड़ी",
+   "votes": 1
+  },
+  {
+   "word": "parao",
+   "hindi": "पराव",
+   "votes": 1
+  },
+  {
+   "word": "hadiaya",
+   "hindi": "हडियाया",
+   "votes": 1
+  },
+  {
+   "word": "jasai",
+   "hindi": "जसाई",
+   "votes": 1
+  },
+  {
+   "word": "jh",
+   "hindi": "झारा",
+   "votes": 1
+  },
+  {
+   "word": "samdhari",
+   "hindi": "समदड़ी",
+   "votes": 1
+  },
+  {
+   "word": "saharsrakund",
+   "hindi": "सहस्त्रकुंड",
+   "votes": 1
+  },
+  {
+   "word": "khai",
+   "hindi": "खाई",
+   "votes": 1
+  },
+  {
+   "word": "arni",
+   "hindi": "आरणि",
+   "votes": 1
+  },
+  {
+   "word": "kanad",
+   "hindi": "कनाड",
+   "votes": 1
+  },
+  {
+   "word": "astegaon",
+   "hindi": "अष्टगांव",
+   "votes": 1
+  },
+  {
+   "word": "bhairanayakanah",
+   "hindi": "भैरनायकनहल्लि",
+   "votes": 1
+  },
+  {
+   "word": "aralvaymozhi",
+   "hindi": "आरलवायमोषि",
+   "votes": 1
+  },
+  {
+   "word": "araon",
+   "hindi": "आराऔं",
+   "votes": 1
+  },
+  {
+   "word": "circus",
+   "hindi": "सर्कस",
+   "votes": 1
+  },
+  {
+   "word": "karea",
+   "hindi": "कड़ेया",
+   "votes": 1
+  },
+  {
+   "word": "harua",
+   "hindi": "हाड़ोया",
+   "votes": 1
+  },
+  {
+   "word": "lachhmangarh",
+   "hindi": "लक्ष्मणगढ़",
+   "votes": 1
+  },
+  {
+   "word": "khumtai",
+   "hindi": "खूमटाई",
+   "votes": 1
+  },
+  {
+   "word": "senchoa",
+   "hindi": "सेनछवा",
+   "votes": 1
+  },
+  {
+   "word": "krishnai",
+   "hindi": "कृषनाई",
+   "votes": 1
+  },
+  {
+   "word": "nimdanri",
+   "hindi": "नीमदाँड़ि",
+   "votes": 1
+  },
+  {
+   "word": "navi",
+   "hindi": "नया",
+   "votes": 1
+  },
+  {
+   "word": "cancona",
+   "hindi": "काणकोण",
+   "votes": 1
+  },
+  {
+   "word": "barua",
+   "hindi": "बरूया",
+   "votes": 1
+  },
+  {
+   "word": "badhai",
+   "hindi": "बधाई",
+   "votes": 1
+  },
+  {
+   "word": "serampore",
+   "hindi": "श्रीरामपुर",
+   "votes": 1
+  },
+  {
+   "word": "satraon",
+   "hindi": "सतरांव",
+   "votes": 1
+  },
+  {
+   "word": "yerra",
+   "hindi": "यर",
+   "votes": 1
+  },
+  {
+   "word": "thallak",
+   "hindi": "तलकु",
+   "votes": 1
+  },
+  {
+   "word": "factory",
+   "hindi": "फेक्ट्री",
+   "votes": 1
+  },
+  {
+   "word": "ng",
+   "hindi": "एनजी",
+   "votes": 1
+  },
+  {
+   "word": "nauganwan",
+   "hindi": "नोगांवां",
+   "votes": 1
+  },
+  {
+   "word": "pariawan",
+   "hindi": "परियांवा",
+   "votes": 1
+  },
+  {
+   "word": "jhaua",
+   "hindi": "झऊआ",
+   "votes": 1
+  },
+  {
+   "word": "orai",
+   "hindi": "उराइ",
+   "votes": 1
+  },
+  {
+   "word": "ahiri",
+   "hindi": "आहीरीटोला",
+   "votes": 1
+  },
+  {
+   "word": "zamania",
+   "hindi": "जमानियाँ",
+   "votes": 1
+  },
+  {
+   "word": "pattambi",
+   "hindi": "पट्टाम्बि",
+   "votes": 1
+  },
+  {
+   "word": "karad",
+   "hindi": "कराड",
+   "votes": 1
+  },
+  {
+   "word": "dhamangaon",
+   "hindi": "धामनगांव",
+   "votes": 1
+  },
+  {
+   "word": "kuan",
+   "hindi": "जंक्शन",
+   "votes": 1
+  },
+  {
+   "word": "dr",
+   "hindi": "डा",
+   "votes": 1
+  },
+  {
+   "word": "jaimurtinagar",
+   "hindi": "जयमूर्ति",
+   "votes": 1
+  },
+  {
+   "word": "marichethal",
+   "hindi": "मरीचिताल",
+   "votes": 1
+  },
+  {
+   "word": "pindrai",
+   "hindi": "पिन्डराई",
+   "votes": 1
+  },
+  {
+   "word": "pahad",
+   "hindi": "पहाड",
+   "votes": 1
+  },
+  {
+   "word": "garhmau",
+   "hindi": "गढ़माऊ",
+   "votes": 1
+  },
+  {
+   "word": "line",
+   "hindi": "लाईन",
+   "votes": 1
+  },
+  {
+   "word": "white",
+   "hindi": "वाहइट",
+   "votes": 1
+  },
+  {
+   "word": "field",
+   "hindi": "फिल्ड",
+   "votes": 1
+  },
+  {
+   "word": "satellite",
+   "hindi": "सेटालाईट",
+   "votes": 1
+  },
+  {
+   "word": "ramghat",
+   "hindi": "रामघाट",
+   "votes": 1
+  },
+  {
+   "word": "sarayan",
+   "hindi": "सरैयां",
+   "votes": 1
+  },
+  {
+   "word": "katareah",
+   "hindi": "कटरिया",
+   "votes": 1
+  },
+  {
+   "word": "wadegaon",
+   "hindi": "वडेगांव",
+   "votes": 1
+  },
+  {
+   "word": "masangaon",
+   "hindi": "मसनगाँव",
+   "votes": 1
+  },
+  {
+   "word": "nagaon",
+   "hindi": "नगाँव",
+   "votes": 1
+  },
+  {
+   "word": "nadiad",
+   "hindi": "नडियाद",
+   "votes": 1
+  },
+  {
+   "word": "pp",
+   "hindi": "पिंंपल",
+   "votes": 1
+  },
+  {
+   "word": "goan",
+   "hindi": "गांव",
+   "votes": 1
+  },
+  {
+   "word": "capital",
+   "hindi": "राजधानी",
+   "votes": 1
+  },
+  {
+   "word": "sak",
+   "hindi": "संखेड़ा",
+   "votes": 1
+  },
+  {
+   "word": "mahendra",
+   "hindi": "महेन्द्र",
+   "votes": 1
+  },
+  {
+   "word": "machriawan",
+   "hindi": "मछरीयावां",
+   "votes": 1
+  },
+  {
+   "word": "bhaterh",
+   "hindi": "भटेड़",
+   "votes": 1
+  },
+  {
+   "word": "julgaon",
+   "hindi": "जलगांव",
+   "votes": 1
+  },
+  {
+   "word": "aspari",
+   "hindi": "आस्परि",
+   "votes": 1
+  },
+  {
+   "word": "lanjigarh",
+   "hindi": "लान्जीगढ़",
+   "votes": 1
+  },
+  {
+   "word": "mariahu",
+   "hindi": "मडियाहू",
+   "votes": 1
+  },
+  {
+   "word": "unchaulia",
+   "hindi": "ऊँछौलिया",
+   "votes": 1
+  },
+  {
+   "word": "kankaria",
+   "hindi": "कांकरीया",
+   "votes": 1
+  },
+  {
+   "word": "khatgaon",
+   "hindi": "खाटगांव",
+   "votes": 1
+  },
+  {
+   "word": "janghai",
+   "hindi": "जघई",
+   "votes": 1
+  },
+  {
+   "word": "alambagh",
+   "hindi": "आलमबाग",
+   "votes": 1
+  },
+  {
+   "word": "giani",
+   "hindi": "ज्ञानी",
+   "votes": 1
+  },
+  {
+   "word": "sathiaon",
+   "hindi": "सठियांव",
+   "votes": 1
+  },
+  {
+   "word": "gurgaon",
+   "hindi": "गुडग़ांव",
+   "votes": 1
+  },
+  {
+   "word": "gangani",
+   "hindi": "गनगनियाँ",
+   "votes": 1
+  },
+  {
+   "word": "tundu",
+   "hindi": "टुन्डु",
+   "votes": 1
+  },
+  {
+   "word": "katrasgarh",
+   "hindi": "कटरासगढ़",
+   "votes": 1
+  },
+  {
+   "word": "ranjangaon",
+   "hindi": "रांजणगांव",
+   "votes": 1
+  },
+  {
+   "word": "raigarh",
+   "hindi": "रायगढ़",
+   "votes": 1
+  },
+  {
+   "word": "bendi",
+   "hindi": "बेन्डि",
+   "votes": 1
+  },
+  {
+   "word": "puduru",
+   "hindi": "पूडूर",
+   "votes": 1
+  },
+  {
+   "word": "ph",
+   "hindi": "पीएच",
+   "votes": 1
+  },
+  {
+   "word": "chamua",
+   "hindi": "छमुया",
+   "votes": 1
+  },
+  {
+   "word": "kalamalia",
+   "hindi": "कलमल्ला",
+   "votes": 1
+  },
+  {
+   "word": "nawan",
+   "hindi": "नवां",
+   "votes": 1
+  },
+  {
+   "word": "bagdihi",
+   "hindi": "बागडीह",
+   "votes": 1
+  },
+  {
+   "word": "chhit",
+   "hindi": "छीठ",
+   "votes": 1
+  },
+  {
+   "word": "se",
+   "hindi": "ई)",
+   "votes": 1
+  },
+  {
+   "word": "thambawati",
+   "hindi": "ताम्बीवटी",
+   "votes": 1
+  },
+  {
+   "word": "quarry",
+   "hindi": "क्वारी",
+   "votes": 1
+  },
+  {
+   "word": "cab",
+   "hindi": "केव",
+   "votes": 1
+  },
+  {
+   "word": "kutcherry",
+   "hindi": "कचहरी",
+   "votes": 1
+  },
+  {
+   "word": "garudijhatia",
+   "hindi": "गरूडीझाटिया",
+   "votes": 1
+  },
+  {
+   "word": "avoiding",
+   "hindi": "एवायडिं",
+   "votes": 1
+  },
+  {
+   "word": "sareigram",
+   "hindi": "सरईग्राम",
+   "votes": 1
+  },
+  {
+   "word": "pudi",
+   "hindi": "पूडि",
+   "votes": 1
+  },
+  {
+   "word": "gy",
+   "hindi": "ईस्ट",
+   "votes": 1
+  },
+  {
+   "word": "upper",
+   "hindi": "अपर",
+   "votes": 1
+  },
+  {
+   "word": "baragn",
+   "hindi": "बडगांव",
+   "votes": 1
+  },
+  {
+   "word": "transh",
+   "hindi": "ट्रांस",
+   "votes": 1
+  },
+  {
+   "word": "matia",
+   "hindi": "मटिया",
+   "votes": 1
+  },
+  {
+   "word": "walgaon",
+   "hindi": "वालगांंव",
+   "votes": 1
+  },
+  {
+   "word": "sdg",
+   "hindi": "एसडीजी",
+   "votes": 1
+  },
+  {
+   "word": "smriti",
+   "hindi": "स्मृति",
+   "votes": 1
+  },
+  {
+   "word": "rawania",
+   "hindi": "रवांजना",
+   "votes": 1
+  },
+  {
+   "word": "bye",
+   "hindi": "बाइ",
+   "votes": 1
+  },
+  {
+   "word": "bahai",
+   "hindi": "बहाई",
+   "votes": 1
+  },
+  {
+   "word": "khan",
+   "hindi": "खाँ",
+   "votes": 1
+  },
+  {
+   "word": "mahisgaon",
+   "hindi": "महिशगांव",
+   "votes": 1
+  },
+  {
+   "word": "sawai",
+   "hindi": "सवाई",
+   "votes": 1
+  },
+  {
+   "word": "makudi",
+   "hindi": "मकूड़ी",
+   "votes": 1
+  },
+  {
+   "word": "pindlai",
+   "hindi": "पिनडियाल",
+   "votes": 1
+  },
+  {
+   "word": "krishnama",
+   "hindi": "कृष्णम्मा",
+   "votes": 1
+  },
+  {
+   "word": "sahai",
+   "hindi": "सहाय",
+   "votes": 1
+  },
+  {
+   "word": "chaf",
+   "hindi": "चाफ",
+   "votes": 1
+  },
+  {
+   "word": "utrahtia",
+   "hindi": "उतरेटिया",
+   "votes": 1
+  },
+  {
+   "word": "thuria",
+   "hindi": "धूरिया",
+   "votes": 1
+  },
+  {
+   "word": "ghatigaon",
+   "hindi": "घाटीगाँव",
+   "votes": 1
+  },
+  {
+   "word": "bhai",
+   "hindi": "भाई",
+   "votes": 1
+  },
+  {
+   "word": "banaili",
+   "hindi": "बनाईलि",
+   "votes": 1
+  },
+  {
+   "word": "asanboni",
+   "hindi": "आसानबनि",
+   "votes": 1
+  },
+  {
+   "word": "nua",
+   "hindi": "नूआ",
+   "votes": 1
+  },
+  {
+   "word": "pakara",
+   "hindi": "पकरिया",
+   "votes": 1
+  },
+  {
+   "word": "sivungaon",
+   "hindi": "शिवनगांव",
+   "votes": 1
+  },
+  {
+   "word": "det",
+   "hindi": "डेट",
+   "votes": 1
+  },
+  {
+   "word": "madhada",
+   "hindi": "मढ़डा",
+   "votes": 1
+  },
+  {
+   "word": "nuagaon",
+   "hindi": "नवगांव",
+   "votes": 1
+  },
+  {
+   "word": "rao",
+   "hindi": "राव",
+   "votes": 1
+  },
+  {
+   "word": "mendu",
+   "hindi": "मेण्डू",
+   "votes": 1
+  },
+  {
+   "word": "raya",
+   "hindi": "राया",
+   "votes": 1
+  },
+  {
+   "word": "sakarayapatna",
+   "hindi": "सकरायपटण",
+   "votes": 1
+  },
+  {
+   "word": "doddanatta",
+   "hindi": "डोड्डन्ट्टा",
+   "votes": 1
+  },
+  {
+   "word": "hasanbazar",
+   "hindi": "हसन",
+   "votes": 1
+  }
+ ],
+ "ambiguous": [
+  {
+   "word": "road",
+   "candidates": [
+    [
+     "रोड",
+     179
+    ],
+    [
+     "रोड़",
+     118
+    ],
+    [
+     "रोअद",
+     1
+    ],
+    [
+     "पुगुर",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "college",
+   "candidates": [
+    [
+     "कालेज",
+     2
+    ],
+    [
+     "कॉलेज",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "new",
+   "candidates": [
+    [
+     "न्यु",
+     11
+    ],
+    [
+     "नियु",
+     7
+    ],
+    [
+     "न्यू",
+     4
+    ],
+    [
+     "नई",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "deccan",
+   "candidates": [
+    [
+     "डेक्कन",
+     2
+    ],
+    [
+     "डेकन",
+     1
+    ],
+    [
+     "दक्कन",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "kanpur",
+   "candidates": [
+    [
+     "कानपुर",
+     4
+    ],
+    [
+     "कानपूर",
+     2
+    ]
+   ]
+  },
+  {
+   "word": "bank",
+   "candidates": [
+    [
+     "बैंक",
+     3
+    ],
+    [
+     "बेंक",
+     2
+    ]
+   ]
+  },
+  {
+   "word": "pattabiram",
+   "candidates": [
+    [
+     "पट्टाबिराम",
+     2
+    ],
+    [
+     "पट्टबिराम",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "daund",
+   "candidates": [
+    [
+     "दौंड",
+     2
+    ],
+    [
+     "दौण्ड",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "anand",
+   "candidates": [
+    [
+     "आनंद",
+     2
+    ],
+    [
+     "आणंद",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "alur",
+   "candidates": [
+    [
+     "आलुर",
+     2
+    ],
+    [
+     "आलूर",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "chandi",
+   "candidates": [
+    [
+     "चंड़ी",
+     2
+    ],
+    [
+     "चंडी",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "house",
+   "candidates": [
+    [
+     "हाउस",
+     2
+    ],
+    [
+     "हाऊस",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "temple",
+   "candidates": [
+    [
+     "टेम्पल",
+     2
+    ],
+    [
+     "मंदिर",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "bir",
+   "candidates": [
+    [
+     "बीर",
+     2
+    ],
+    [
+     "बीड़",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "khera",
+   "candidates": [
+    [
+     "खेडा",
+     6
+    ],
+    [
+     "खेरा",
+     5
+    ],
+    [
+     "खेड़ा",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "fatehgarh",
+   "candidates": [
+    [
+     "फतेहगढ़",
+     2
+    ],
+    [
+     "फतेहगढ",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "bandh",
+   "candidates": [
+    [
+     "बंध",
+     2
+    ],
+    [
+     "बांध",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "pani",
+   "candidates": [
+    [
+     "पानी",
+     2
+    ],
+    [
+     "पातलपानी",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "ki",
+   "candidates": [
+    [
+     "की",
+     2
+    ],
+    [
+     "कि",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "bara",
+   "candidates": [
+    [
+     "बारा",
+     2
+    ],
+    [
+     "बड़",
+     1
+    ],
+    [
+     "बड़ा",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "andal",
+   "candidates": [
+    [
+     "अंडाल",
+     2
+    ],
+    [
+     "अंंडाल",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "basi",
+   "candidates": [
+    [
+     "बसी",
+     2
+    ],
+    [
+     "बस्सी",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "dumra",
+   "candidates": [
+    [
+     "डुमरा",
+     2
+    ],
+    [
+     "दुमरा",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "bordi",
+   "candidates": [
+    [
+     "बोर्डी",
+     2
+    ],
+    [
+     "बोरडी",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "chinna",
+   "candidates": [
+    [
+     "चिन्न",
+     2
+    ],
+    [
+     "चिन्ना",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "kathghar",
+   "candidates": [
+    [
+     "कटघर",
+     2
+    ],
+    [
+     "काठघर",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "garhi",
+   "candidates": [
+    [
+     "गढ़ी",
+     2
+    ],
+    [
+     "गढी",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "bhatinda",
+   "candidates": [
+    [
+     "भटिंडा",
+     2
+    ],
+    [
+     "बठिंडा",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "tn",
+   "candidates": [
+    [
+     "टाउन",
+     2
+    ],
+    [
+     "टीएन",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "tanda",
+   "candidates": [
+    [
+     "टांडा",
+     2
+    ],
+    [
+     "टंडा",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "sindri",
+   "candidates": [
+    [
+     "सिंदरी",
+     2
+    ],
+    [
+     "सिंद्री",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "south",
+   "candidates": [
+    [
+     "साउथ",
+     4
+    ],
+    [
+     "दक्षिण",
+     3
+    ]
+   ]
+  },
+  {
+   "word": "north",
+   "candidates": [
+    [
+     "नोर्थ",
+     2
+    ],
+    [
+     "नार्थ",
+     1
+    ],
+    [
+     "उत्तर",
+     1
+    ],
+    [
+     "सिम्हाचलम",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "goods",
+   "candidates": [
+    [
+     "गुडस",
+     3
+    ],
+    [
+     "गुड्स",
+     2
+    ]
+   ]
+  },
+  {
+   "word": "jaliya",
+   "candidates": [
+    [
+     "जालिया",
+     2
+    ],
+    [
+     "जालीया",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "kala",
+   "candidates": [
+    [
+     "काला",
+     2
+    ],
+    [
+     "कलान",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "jai",
+   "candidates": [
+    [
+     "जै",
+     2
+    ],
+    [
+     "जय",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "lehra",
+   "candidates": [
+    [
+     "लेहरा",
+     2
+    ],
+    [
+     "लहरा",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "chanda",
+   "candidates": [
+    [
+     "चंदा",
+     2
+    ],
+    [
+     "चांदा",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "panel",
+   "candidates": [
+    [
+     "पेनल",
+     2
+    ],
+    [
+     "पैनल",
+     1
+    ]
+   ]
+  },
+  {
+   "word": "bh",
+   "candidates": [
+    [
+     "बिहार",
+     2
+    ],
+    [
+     "भ",
+     1
+    ]
+   ]
+  }
+ ]
+}

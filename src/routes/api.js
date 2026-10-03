@@ -1,5 +1,5 @@
-const { getJourneysOverlay, deepTranslate } = require('../utils/translator');
 const express = require("express");
+const { localize } = require("../i18n");
 const router = express.Router();
 const {
   checkPNRStatus,
@@ -11,31 +11,35 @@ const {
   getTrainCoaches,
   getAvailability,
   fareLookup,
+  getJourneysOverlay,
 } = require("../utils/railradar");
 const { getOrSet, TTL, getCacheStats, flushCache } = require("../middleware/cache");
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Helper: wrap any railkit call with consistent error handling
 // ─────────────────────────────────────────────────────────────────────────────
-async function safeCall(res, fn, lang="en") {
+// Every response - success or error - goes through here so `?lang=hi` is
+// honoured uniformly (the old code forgot it on PNR and error paths).
+function send(res, req, status, body) {
+  const lang = req.query.lang;
+  res.set("Content-Language", String(lang || "").toLowerCase().startsWith("hi") ? "hi" : "en");
+  return res.status(status).json(localize(body, lang));
+}
+
+function fail(req, res, status, message) {
+  return send(res, req, status, { success: false, message, data: null });
+}
+
+async function safeCall(req, res, fn) {
   try {
-    let result = await fn();
-    result = await deepTranslate(result, lang);
+    const result = await fn();
     if (result && result.success === false) {
-      return res.status(400).json({
-        success: false,
-        message: result.message || "RailKit API returned failure",
-        data: null,
-      });
+      return fail(req, res, 400, result.message || "RailKit API returned failure");
     }
-    return res.json({ success: true, ...result });
+    return send(res, req, 200, { success: true, ...result });
   } catch (err) {
     console.error("[Route Error]", err.message);
-    return res.status(500).json({
-      success: false,
-      message: err.message || "Internal server error",
-      data: null,
-    });
+    return fail(req, res, 500, err.message || "Internal server error");
   }
 }
 
@@ -48,14 +52,10 @@ router.get("/pnr/:pnr", async (req, res) => {
   const { pnr } = req.params;
 
   if (!/^\d{10}$/.test(pnr)) {
-    return res.status(400).json({
-      success: false,
-      message: "Invalid PNR. Must be exactly 10 digits.",
-      data: null,
-    });
+    return fail(req, res, 400, "Invalid PNR. Must be exactly 10 digits.");
   }
 
-  return safeCall(res, () => checkPNRStatus(pnr));
+  return safeCall(req, res, () => checkPNRStatus(pnr));
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -67,11 +67,7 @@ router.get("/train/:trainNo", async (req, res) => {
   const { trainNo } = req.params;
 
   if (!/^\d{5}$/.test(trainNo)) {
-    return res.status(400).json({
-      success: false,
-      message: "Invalid train number. Must be exactly 5 digits.",
-      data: null,
-    });
+    return fail(req, res, 400, "Invalid train number. Must be exactly 5 digits.");
   }
 
   try {
@@ -81,9 +77,9 @@ router.get("/train/:trainNo", async (req, res) => {
       () => getTrainInfo(trainNo)
     );
     res.locals.cached = cached;
-    return res.json(await deepTranslate({ success: true, cached, ...data }, req.query.lang));
+    return send(res, req, 200, { success: true, cached, ...data });
   } catch (err) {
-    return res.status(500).json({ success: false, message: err.message, data: null });
+    return fail(req, res, 500, err.message);
   }
 });
 
@@ -97,9 +93,9 @@ router.get('/train/:trainNo/coaches', async (req, res) => {
       () => getTrainCoaches(trainNo)
     );
     res.locals.cached = cached;
-    return res.json(await deepTranslate({ success: true, cached, ...data }, req.query.lang));
+    return send(res, req, 200, { success: true, cached, ...data });
   } catch (err) {
-    return res.status(500).json({ success: false, message: err.message, data: null });
+    return fail(req, res, 500, err.message);
   }
 });
 
@@ -112,7 +108,7 @@ router.get("/train/:trainNo/track", async (req, res) => {
   const { trainNo } = req.params;
   const { date } = req.query;
 
-  return safeCall(res, () => trackTrain(trainNo, date), req.query.lang);
+  return safeCall(req, res, () => trackTrain(trainNo, date));
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -131,9 +127,9 @@ router.get("/train/:trainNo/history", async (req, res) => {
       () => getTrainHistory(trainNo, date)
     );
     res.locals.cached = cached;
-    return res.json(await deepTranslate({ success: true, cached, ...data }, req.query.lang));
+    return send(res, req, 200, { success: true, cached, ...data });
   } catch (err) {
-    return res.status(500).json({ success: false, message: err.message, data: null });
+    return fail(req, res, 500, err.message);
   }
 });
 
@@ -146,14 +142,10 @@ router.get("/station/:code/live", async (req, res) => {
   const hours = parseInt(req.query.hours) || 2;
 
   if (![2, 4, 8].includes(hours)) {
-    return res.status(400).json({
-      success: false,
-      message: "Query param 'hours' must be 2, 4, or 8.",
-      data: null,
-    });
+    return fail(req, res, 400, "Query param 'hours' must be 2, 4, or 8.");
   }
 
-  return safeCall(res, () => liveAtStation(code.toUpperCase(), hours), req.query.lang);
+  return safeCall(req, res, () => liveAtStation(code.toUpperCase(), hours));
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -164,11 +156,7 @@ router.get("/search", async (req, res) => {
   const { from, to, date } = req.query;
 
   if (!from || !to) {
-    return res.status(400).json({
-      success: false,
-      message: "Query params 'from' and 'to' are required (station codes).",
-      data: null,
-    });
+    return fail(req, res, 400, "Query params 'from' and 'to' are required (station codes).");
   }
 
   const cacheKey = `search_${from.toUpperCase()}_${to.toUpperCase()}_${date || "any"}`;
@@ -210,9 +198,9 @@ router.get("/search", async (req, res) => {
     }
     
     res.locals.cached = cached;
-    return res.json(await deepTranslate({ success: true, cached, ...data }, req.query.lang));
+    return send(res, req, 200, { success: true, cached, ...data });
   } catch (err) {
-    return res.status(500).json({ success: false, message: err.message, data: null });
+    return fail(req, res, 500, err.message);
   }
 });
 

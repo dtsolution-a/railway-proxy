@@ -1,17 +1,18 @@
 {
   "name": "railway-proxy",
   "version": "1.0.0",
-  "description": "Node.js proxy server for RailKit API — wraps all endpoints with caching and JSON logging",
+  "description": "Node.js proxy server for RailKit API \u00e2\u20ac\u201d wraps all endpoints with caching and JSON logging",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "test": "node --test test/*.test.js",
+    "build:dict": "node scripts/build_dictionary.js"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@vitalets/google-translate-api": "^9.2.1",
     "axios": "^1.20.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
